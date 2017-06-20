@@ -4,7 +4,7 @@ One part of the stack where we can think about improving our performance is with
 
 ### Use the database
 
-We'll get to database tips in a minute, but the ultimate database performance tips, is to lean on the database as much as possible.  Databases are still very good at what they do, and therefore we should use them.  That is, instead of using a ruby method to select the proper data, or sum the proper data, lean on either activerecord or a raw sql query to perform the job.  
+We'll get to database tips in a minute, but the ultimate database performance tip is to lean on the database as much as possible.  Databases are still very good at what they do, and therefore we should use them.  That is, instead of using a Ruby method to select the proper data or sum the proper data, lean on either activerecord or a raw SQL query to perform the job.  
 
 ### N + 1 problem
 
@@ -26,7 +26,7 @@ Take a look at how to solve the n + 1 problem by watching the following railscas
 
 ### Indexing
 
-Databases are very good at scanning through lots of data quickly.  However, in a production database that can be a lot of information.  So a simple request to find whether a user by email (say, when authenticating a user) may become a costly request in production.
+Databases are very good at scanning through lots of data quickly.  However, in a production database that can be a lot of information.  So a simple request to find a user by email (say, when authenticating a user) may become a costly request in production.
 
 To solve this problem, you can add an index to a given column in a table.  Indexing works similar to how the hash data structure works, and we encourage you to review that lesson in the algorithm coursework if you need more information.
 
